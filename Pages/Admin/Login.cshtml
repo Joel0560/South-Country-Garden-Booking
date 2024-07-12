@@ -1,0 +1,31 @@
+﻿@page
+@model south_country_garden.Pages.Admin.LoginModel
+@{
+}
+
+@if (HttpContext.Session.GetString("LogInState") != "true")
+{
+    <form method="post">
+        <div class="border p-3 mt-4">
+            <div class="row pb-2">
+                <h2 class="text-primary pl-3">Please Log In</h2>
+                <hr />
+            </div>
+            <div class="mb-3">
+                <label asp-for="accounts.username" class="control-label"></label>
+                <input asp-for="accounts.username" class="form-control" minlength="4" maxlength="30" />
+                <span asp-validation-for="accounts.username" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="accounts.password" class="control-label"></label>
+                <input asp-for="accounts.password" type="password" class="form-control" minlength="4" maxlength="30" />
+                <span asp-validation-for="accounts.password" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:150px">Log In</button>
+        </div>
+    </form>
+}
+else
+{
+    <h1>You are already logged in</h1>
+}

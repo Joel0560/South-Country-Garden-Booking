@@ -1,0 +1,83 @@
+﻿@page
+@using System.Globalization;
+@model south_country_garden.Pages.Admin_Controls.IndexModel
+
+@{
+    ViewData["Title"] = "Admin";
+}
+
+@if (HttpContext.Session.GetString("LogInState") == "true")
+{
+    <partial name="_Notification" />
+    
+    <div class="container p-3">
+        <div class="row pt-4">
+            <div class="col-6">
+                <h1 class="text-primary normalize-heading">Booking Records</h1>
+            </div>
+            <div class="col-6 text-end">
+                <a asp-page="create" class="btn btn-primary">
+                    <i class="bi bi-plus-square"></i> &nbsp; Create New Record
+                </a>
+                <form method="post" class="d-inline">
+                    <button asp-page-handler="LogOut" class="btn btn-secondary">
+                        <i class="bi bi-box-arrow-right"></i> &nbsp; Log Out
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <br /><br />
+
+        <table class="table table-bordered table-striped text-center" style="width:100%">
+            <thead>
+                <tr>
+                    <th>
+                        Booking ID
+                    </th>
+                    <th>
+                        Client / Company Name
+                    </th>
+                    <th>
+                        Event Date
+                    </th>
+                    <th>
+                        Status
+                    </th>
+                    <th>Edit / Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.booking_records)
+                {
+                    if (item.booking_status != "Deleted")
+                    {
+                        string inputDate = item.event_date;
+                        DateTime date = DateTime.ParseExact(inputDate, "yyyy-MM-dd", CultureInfo.InvariantCulture);
+                        string wordForm = date.ToString("MMMM d, yyyy");
+                        <tr>
+                            <td width="15%">@Html.DisplayFor(modelItem => item.booking_id)</td>
+                            <td width="31%">@Html.DisplayFor(modelItem => item.name)</td>
+                            <td width="20%">@wordForm</td>
+                            <td width="20%">@Html.DisplayFor(modelItem => item.booking_status)</td>
+                            <td>
+                                <div class="btn-group d-flex justify-content-around">
+                                    <a asp-page="./Edit" asp-route-id="@item.booking_id" class="btn btn-primary mx-2">
+                                        <i class="bi bi-pencil-square"></i>
+                                    </a>
+                                    <a asp-page="./Delete" asp-route-id="@item.booking_id" class="btn btn-danger mx-2">
+                                        <i class="bi bi-trash-fill"></i>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <h1 class="text-danger text-center">UNAUTHORIZED ACCESS!</h1>
+}

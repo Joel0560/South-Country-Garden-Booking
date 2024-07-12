@@ -1,0 +1,56 @@
+﻿@page
+@model south_country_garden.Pages.Admin.AuditTrailModel
+@{
+    ViewData["Title"] = "Audit Trail";
+}
+
+@if (HttpContext.Session.GetString("LogInState") == "true" && HttpContext.Session.GetString("IsManager") == "true")
+{
+    <partial name="_Notification" />
+
+    <div class="container p-3">
+        <div class="row pt-4">
+            <div class="col-6">
+                <h1 class="text-primary normalize-heading">Audit Trail</h1>
+            </div>
+        </div>
+
+        <br /><br />
+
+        <table class="table table-bordered table-striped text-center" style="width:100%">
+            <thead>
+                <tr>
+                    <th>
+                        Audit ID
+                    </th>
+                    <th>
+                        Account ID
+                    </th>
+                    <th>
+                        Booking ID
+                    </th>
+                    <th>
+                        Date and Time
+                    </th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.audit_trail)
+                {
+                    <tr>
+                        <td width="20%">@Html.DisplayFor(modelItem => item.audit_id)</td>
+                        <td width="20%">@Html.DisplayFor(modelItem => item.account_id)</td>
+                        <td width="20%">@Html.DisplayFor(modelItem => item.booking_id)</td>
+                        <td width="20%">@Html.DisplayFor(modelItem => item.datetime)</td>
+                        <td width="20%">@Html.DisplayFor(modelItem => item.action)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <h1 class="text-danger text-center">UNAUTHORIZED ACCESS!</h1>
+}

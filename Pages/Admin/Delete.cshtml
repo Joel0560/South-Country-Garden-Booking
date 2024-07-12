@@ -1,0 +1,44 @@
+﻿@page
+@model south_country_garden.Pages.Admin_Controls.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+@if (HttpContext.Session.GetString("LogInState") == "true")
+{
+    <form method="post">
+        <input hidden asp-for="booking_records.booking_id" />
+        <div class="border p-3 mt-4">
+            <div class="row pb-2">
+                <h2 class="text-primary pl-3 normalize-heading">Delete Booking Record</h2>
+                <hr />
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.name"></label>
+                <input asp-for="booking_records.name" disabled class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.event_date"></label>
+                <input asp-for="booking_records.event_date" disabled class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.booking_status"></label>
+                <input asp-for="booking_records.booking_status" disabled class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-danger" style="width:150px">Delete</button>
+            <a asp-page="Index" class="btn btn-secondary" style="width:150px">Back to List</a>
+        </div>
+    </form>
+}
+else
+{
+    <h1 class="text-danger text-center">UNAUTHORIZED ACCESS!</h1>
+}
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

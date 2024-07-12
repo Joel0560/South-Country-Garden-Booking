@@ -1,0 +1,293 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<partial name="_Notification" />
+
+<h1 class="text-center mt-4 text-purple">South Country Garden</h1>
+<p class="text-center">
+    Event Venue in Santa Rosa<br />Open today until 11:00PM
+</p>
+<div class="text-center">
+    <a class="btn btn-primary p-3" asp-page="/Booking" role="button"><i class="bi bi-pencil-square"></i> BOOK NOW</a>
+</div>
+<img src="images/imgOne.jpg"
+        class="rounded mx-auto d-block img-fluid my-5"
+        alt="Header Image" />
+<section id="updates"><!--Start of Updates section-->
+    <br /><br />
+    <hr class="hr-updates" />
+    <h2 class="text-center">UPDATES</h2>
+    <div class="container px-0 px-lg-5 mt-5">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">
+            
+            <div class="col px-5">
+                <div class="card h-100">
+                    <a href="#">
+                        <img src="~/images/updates/05132020/card.png" class="card-img-top" alt="Updates - May 13, 2020" />
+                    </a>
+                    <div class="card-body">
+                        <a class="card-link text-decoration-none" href="#">
+                            <p class="card-title h5">May 13, 2020</p>
+                        </a>
+                        <p class="card-text">
+                            To our Dear clients
+                            <br /><br />
+                            Our thoughts and prayers are with you in especially in these troubled times brought by the COVID-19 virus.
+                            <br /><br />
+                            South Country Garden, hopes that you and your loved ones are safe and sound at your homes while we are experiencing this pandemic.
+                            <br /><br />
+                            Due to this COVID-19, some of you...
+                        </p>
+                        <a class="card-link" href="#">Read More</a>
+                        <p class="h5 mt-3">
+                            <a class="card-link text-decoration-none proper-underline" asp-page="/Booking">BOOK</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col px-5">
+                <div class="card h-100">
+                    <a href="#">
+                        <img src="~/images/updates/21112019/card.jpg" class="card-img-top" alt="Updates - Nov 21, 2019" />
+                    </a>
+                    <div class="card-body">
+                        <a class="card-link text-decoration-none" href="#">
+                            <p class="card-title h5">Nov 21, 2019</p>
+                        </a>
+                        <p class="card-text">
+                            New numbers:
+                            <br /><br />
+                            09176733017 (Globe)
+                            <br />
+                            0493081279 (Globeline)
+                            <br />
+                            023301609 (PLDT)
+                        </p>
+                        <p class="h5 mt-2">
+                            <a class="card-link text-decoration-none proper-underline" href="tel:+63-917-871-4811">CALL NOW</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col px-5">
+                <div class="card h-100">
+                    <a href="#">
+                        <img src="~/images/updates/18032018/card.jpg" class="card-img-top" alt="Updates - Mar 18, 2018" />
+                    </a>
+                    <div class="card-body">
+                        <a class="card-link text-decoration-none" href="#">
+                            <p class="card-title h5">Mar 18, 2018</p>
+                        </a>
+                        <p class="card-text">
+                            B4 L1 Panorama Ville, Barangay Dita, Santa Rosa City, Laguna
+                            <br />
+                            southcountrygarden@gmail.com
+                            <br />
+                            maticevents@gmail.com
+                            <br />
+                            <a href="http://fb.com/southcountrygarden" target="_blank" rel="noopener noreferrer">fb.com /southcountrygarden</a>
+                            <br />
+                            09152736501 * 024252207 * 09178716962 * 09258019579
+                            <br /><br />
+                            Debut Package (for 100 guests)
+                            <br /><br />
+                            Venue
+                            <br />
+                            Debutant's Room
+                            <br />
+                            Tables with covers, toppers, and decors according t...
+                        </p>
+                        <a class="card-link" href="#">Read More</a>
+                    </div>
+                </div>
+            </div>
+                
+            <div class="col px-5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <a class="card-link text-decoration-none" href="#">
+                            <p class="card-title h5">Mar 10, 2018</p>
+                        </a>
+                        <p class="card-text">
+                            One of the Event's Stylings...
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col px-5">
+                <div class="card h-100">
+                    <a href="#">
+                        <img src="~/images/updates/03032018/card.jpg" class="card-img-top" alt="Updates - Mar 3, 2018" />
+                    </a>
+                    <div class="card-body">
+                        <a class="card-link text-decoration-none" href="#">
+                            <p class="card-title h5">Mar 3, 2018</p>
+                        </a>
+                        <p class="card-text">
+                            Garden Wedding Set up...
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col px-5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <a class="card-link text-decoration-none" href="#">
+                            <p class="card-title h5">Feb 25, 2018</p>
+                        </a>
+                        <p class="card-text">
+                            Table Set Up and light effects
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col px-5">
+                <div class="card h-100">
+                    <a href="#">
+                        <img src="~/images/updates/19022018/card.jpg" class="card-img-top" alt="Updates - Feb 19, 2018" />
+                    </a>
+                    <div class="card-body">
+                        <a class="card-link text-decoration-none" href="#">
+                            <p class="card-title h5">Feb 19, 2018</p>
+                        </a>
+                        <p class="card-text">
+                            Garden Wedding Set up...
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col px-5">
+                <div class="card h-100">
+                    <a href="#">
+                        <img src="~/images/updates/07022018/card.jpg" class="card-img-top" alt="Updates - Feb 7, 2018" />
+                    </a>
+                    <div class="card-body">
+                        <a class="card-link text-decoration-none" href="#">
+                            <p class="card-title h5">Feb 7, 2018</p>
+                        </a>
+                        <p class="card-text">
+                            South Country Garden is an ideal place for all your special event needs. A haven for all occasions;
+                            <br /><br />
+                            South Country Garden is perfect for grand celebrations such as garden weddings or receptions,
+                            debuts, baptismal, birthdays, reunions, to simple social gatherings in any form of
+                            meetings, seminars...
+                        </p>
+                        <a class="card-link" href="#">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section> <!--End of Updates section-->
+
+<section id="testimonials">
+    <br /><br />
+    <hr class="hr-updates" />
+    <h2 class="text-center">TESTIMONIALS</h2>
+    <div class="container-fluid mt-5">
+        <div class="row g-5">
+            <div class="col-12 col-md-6 col-lg-4"">
+                <p>
+                    <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"> </i><i class="bi bi-star-fill"> </i><i class="bi bi-star-fill"></i>
+                    &nbsp;&nbsp;<span class="text-muted">5 years ago</span>
+                </p>
+                <p>
+                    "Very nice place"
+                </p>
+                <p class="text-purple h6">
+                    - Vincent S
+                </p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4"">
+                <p>
+                    <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"> </i><i class="bi bi-star-fill"> </i><i class="bi bi-star-fill"></i>
+                    &nbsp;&nbsp;<span class="text-muted">2 months ago</span>
+                </p>
+                <p>
+                    "A good place to hold events in all occasions!"
+                </p>
+                <p class="text-purple h6">
+                    - Jay M
+                </p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <p>
+                    <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"> </i><i class="bi bi-star-fill"> </i><i class="bi bi-star-fill"></i>
+                    &nbsp;&nbsp;<span class="text-muted">a year ago</span>
+                </p>
+                <p>
+                    "Nice place to hold events here, they also have a cafe there. Will visit again 💙"
+                </p>
+                <p class="text-purple h6">
+                    - Cristine N
+                </p>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="d-flex justify-content-center">
+                <div class="text-purple testimonials-links">
+                    <a class="proper-underline text-decoration-none mx-2"
+                    href="https://search.google.com/local/writereview?placeid=ChIJnXj0T17YlzMRTu2NOmM5MWE"
+                    target="_blank"
+                    rel="noopener noreferrer">WRITE A REVIEW</a>
+                    <a class="proper-underline text-decoration-none mx-2"
+                    href="https://search.google.com/local/reviews?placeid=ChIJnXj0T17YlzMRTu2NOmM5MWE"
+                    target="_blank"
+                    rel="noopener noreferrer">READ MORE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="summary" class="mt-5">
+    <br /><br />
+    <hr class="hr-updates" />
+    <h2 class="text-center">SOUTH COUNTRY GARDEN</h2>
+    <div class="px-3 px-md-4 summary-padding">
+        <p class="mt-5">
+            <span class="text-emphasize">South Country Garden</span> is an ideal place for all your special event needs. A haven for all occasions.
+         </p>
+        <p>
+            South Country Garden is perfect for grand celebrations such as garden weddings or receptions, debuts, baptismal, birthdays, reunions,
+            to simple social gatherings in any form of meetings, seminars, or business trainings.
+            It is also very conducive for team building exercises, pictorials, and church gatherings.
+        </p>
+        <p>
+            <span class="text-emphasize">South Country Garden</span> is a 1,500 square meter private place with a Garden and Forest Pavilion that can accommodate up to 250 guests.
+            With beautifully landscaped surroundings and features that include a fishpond & pond deck, a mini-forest, private air-conditioned rooms,
+            and secure parking space.
+        </p>
+        <p>
+            <span class="text-emphasize">South Country Garden</span> is the perfect place to hold meaningful events worth remembering.
+            Should you wish to set an appointment, please do not hesitate to call us at 0917-673-3017,
+            or email us at <a class="text-decoration-none"href="mailto:southcountrygarden@gmail.com">southcountrygarden@gmail.com</a>
+        </p>
+        <p>
+            <span class="text-italic">For Photos:</span>
+            <br />
+            <span class="text-emphasize">www.facebook.com/southcountrygarden</span>
+            <br />
+            <span class="text-emphasize">www.southcountrygardens.com</span>
+            <br />
+            <span class="text-emphasize">&#64;southcountrygarden</span>
+        </p>
+    </div>
+</section>
+
+<section id="gallery" class="mt-5">
+    <br /><br />
+    <hr class="hr-updates" />
+    <h2 class="text-center">GALLERY</h2>
+    <div class="b0t70b mx-0 mx-lg-5 mt-4 px-0 px-lg-0" id="gallery" jslog="64602; track:impression" data-panel="gallery-panel"><div class="goIW2"><div class="UCecQ"><div class="PWqJSb ZdKHsd"><a href="//www.google.com/maps/uv?pb=!1s0x3397d85e4ff4789d:0x613139633a8ded4e!3m1!7e131!4s!5sSouth+Country+Garden&amp;hl=en&amp;imagekey=!1e10!2sAF1QipPp1QcTEpEc5MlNka5sx61X9D0g3pEiVQu09_cg" class="oYxtQd" target="_blank"><picture aria-label="Business photo"><source media="(min-width: 768px)" srcset="https://lh3.googleusercontent.com/p/AF1QipPp1QcTEpEc5MlNka5sx61X9D0g3pEiVQu09_cg=w960-h960-n-o-v1"><img class="d11Ssd" src="https://lh3.googleusercontent.com/p/AF1QipPp1QcTEpEc5MlNka5sx61X9D0g3pEiVQu09_cg=w768-h768-n-o-v1" data-iml="606782.6999999993" data-atf="false"></picture></a></div><div class="PWqJSb ZdKHsd"><a href="//www.google.com/maps/uv?pb=!1s0x3397d85e4ff4789d:0x613139633a8ded4e!3m1!7e131!4s!5sSouth+Country+Garden&amp;hl=en&amp;imagekey=!1e10!2sAF1QipOFagKNqH7j2sbhe4QqK4eDLdx4EKGWCGfTttyF" class="oYxtQd" target="_blank"><picture aria-label="Business photo"><source media="(min-width: 768px)" srcset="https://lh3.googleusercontent.com/p/AF1QipOFagKNqH7j2sbhe4QqK4eDLdx4EKGWCGfTttyF=w960-h960-n-o-v1"><img class="d11Ssd" src="https://lh3.googleusercontent.com/p/AF1QipOFagKNqH7j2sbhe4QqK4eDLdx4EKGWCGfTttyF=w768-h768-n-o-v1" data-iml="606624.8999999985" data-atf="false"></picture></a></div><div class="PWqJSb ZdKHsd"><a href="//www.google.com/maps/uv?pb=!1s0x3397d85e4ff4789d:0x613139633a8ded4e!3m1!7e131!4s!5sSouth+Country+Garden&amp;hl=en&amp;imagekey=!1e10!2sAF1QipN-NtniS5txSRQtpGg58C_KAmW0cH0_Y3cxGQf2" class="oYxtQd" target="_blank"><picture aria-label="Business photo"><source media="(min-width: 768px)" srcset="https://lh3.googleusercontent.com/p/AF1QipN-NtniS5txSRQtpGg58C_KAmW0cH0_Y3cxGQf2=w960-h960-n-o-v1"><img class="d11Ssd" src="https://lh3.googleusercontent.com/p/AF1QipN-NtniS5txSRQtpGg58C_KAmW0cH0_Y3cxGQf2=w768-h768-n-o-v1" data-iml="607006.8999999985" data-atf="false"></picture></a></div><div class="PWqJSb ZdKHsd"><a href="//www.google.com/maps/uv?pb=!1s0x3397d85e4ff4789d:0x613139633a8ded4e!3m1!7e131!4s!5sSouth+Country+Garden&amp;hl=en&amp;imagekey=!1e10!2sAF1QipOYH-qYIb383XhDnxEl8q78YQ5LPriVp_cK4wQP" class="oYxtQd" target="_blank"><picture aria-label="Business photo"><source media="(min-width: 768px)" srcset="https://lh3.googleusercontent.com/p/AF1QipOYH-qYIb383XhDnxEl8q78YQ5LPriVp_cK4wQP=w960-h960-n-o-v1"><img class="d11Ssd" src="https://lh3.googleusercontent.com/p/AF1QipOYH-qYIb383XhDnxEl8q78YQ5LPriVp_cK4wQP=w768-h768-n-o-v1" data-iml="606836.3000000007" data-atf="false"></picture></a></div><div class="PWqJSb ZdKHsd"><a href="//www.google.com/maps/uv?pb=!1s0x3397d85e4ff4789d:0x613139633a8ded4e!3m1!7e131!4s!5sSouth+Country+Garden&amp;hl=en&amp;imagekey=!1e10!2sAF1QipNYkcul8Kr6pP0HceDv6bkzBSNojFKEk6TY8zjR" class="oYxtQd" target="_blank"><picture aria-label="Business photo"><source media="(min-width: 768px)" srcset="https://lh3.googleusercontent.com/p/AF1QipNYkcul8Kr6pP0HceDv6bkzBSNojFKEk6TY8zjR=w960-h960-n-o-v1"><img class="d11Ssd" src="https://lh3.googleusercontent.com/p/AF1QipNYkcul8Kr6pP0HceDv6bkzBSNojFKEk6TY8zjR=w768-h768-n-o-v1" data-iml="606754.0999999978" data-atf="false"></picture></a></div><div class="PWqJSb ZdKHsd"><a href="//www.google.com/maps/uv?pb=!1s0x3397d85e4ff4789d:0x613139633a8ded4e!3m1!7e131!4s!5sSouth+Country+Garden&amp;hl=en&amp;imagekey=!1e10!2sAF1QipONDRs2ztU_vZFdmpqSd6vCB0r1Wqw2rhLiR5Cg" class="oYxtQd" target="_blank"><picture aria-label="Business photo"><source media="(min-width: 768px)" srcset="https://lh3.googleusercontent.com/p/AF1QipONDRs2ztU_vZFdmpqSd6vCB0r1Wqw2rhLiR5Cg=w960-h960-n-o-v1"><img class="d11Ssd" src="https://lh3.googleusercontent.com/p/AF1QipONDRs2ztU_vZFdmpqSd6vCB0r1Wqw2rhLiR5Cg=w768-h768-n-o-v1" data-iml="606609.3999999985" data-atf="false"></picture></a></div><div class="PWqJSb ZdKHsd"><a href="//www.google.com/maps/uv?pb=!1s0x3397d85e4ff4789d:0x613139633a8ded4e!3m1!7e131!4s!5sSouth+Country+Garden&amp;hl=en&amp;imagekey=!1e10!2sAF1QipNi_wwovEuKk8udKDgF0jWo46C_R9M8QDFcSENQ" class="oYxtQd" target="_blank"><picture aria-label="Business photo"><source media="(min-width: 768px)" srcset="https://lh3.googleusercontent.com/p/AF1QipNi_wwovEuKk8udKDgF0jWo46C_R9M8QDFcSENQ=w960-h960-n-o-v1"><img class="d11Ssd" src="https://lh3.googleusercontent.com/p/AF1QipNi_wwovEuKk8udKDgF0jWo46C_R9M8QDFcSENQ=w768-h768-n-o-v1" data-iml="606601.5999999978" data-atf="false"></picture></a></div><div class="PWqJSb ZdKHsd"><a href="//www.google.com/maps/uv?pb=!1s0x3397d85e4ff4789d:0x613139633a8ded4e!3m1!7e131!4s!5sSouth+Country+Garden&amp;hl=en&amp;imagekey=!1e10!2sAF1QipNXXgD7HbjEIWkA9b0mCNtb3yqKg8T-dxPraCs4" class="oYxtQd" target="_blank"><picture aria-label="Business photo"><source media="(min-width: 768px)" srcset="https://lh3.googleusercontent.com/p/AF1QipNXXgD7HbjEIWkA9b0mCNtb3yqKg8T-dxPraCs4=w960-h960-n-o-v1"><img class="d11Ssd" src="https://lh3.googleusercontent.com/p/AF1QipNXXgD7HbjEIWkA9b0mCNtb3yqKg8T-dxPraCs4=w768-h768-n-o-v1" data-iml="606653.0999999978" data-atf="false"></picture></a></div><div class="PWqJSb ZdKHsd"><a href="//www.google.com/maps/uv?pb=!1s0x3397d85e4ff4789d:0x613139633a8ded4e!3m1!7e131!4s!5sSouth+Country+Garden&amp;hl=en&amp;imagekey=!1e10!2sAF1QipO4lu9jqqKfCqHuBmECLKIrwq7CDWUoWhDxvlUe" class="oYxtQd" target="_blank"><picture aria-label="Business photo"><source media="(min-width: 768px)" srcset="https://lh3.googleusercontent.com/p/AF1QipO4lu9jqqKfCqHuBmECLKIrwq7CDWUoWhDxvlUe=w960-h960-n-o-v1"><img class="d11Ssd" src="https://lh3.googleusercontent.com/p/AF1QipO4lu9jqqKfCqHuBmECLKIrwq7CDWUoWhDxvlUe=w768-h768-n-o-v1" data-iml="606787.5999999978" data-atf="false"></picture></a></div></div></div></div>
+</section>

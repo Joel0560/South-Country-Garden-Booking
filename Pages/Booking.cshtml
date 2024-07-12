@@ -1,0 +1,48 @@
+﻿@page
+@model south_country_garden.Pages.BookingModel
+@{
+    ViewData["Title"] = "Booking";
+}
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary pl-3 normalize-heading">Book Now!</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <label asp-for="booking_records.name" class="control-label"></label>
+            <input asp-for="booking_records.name" class="form-control" maxlength="100" />
+            <span asp-validation-for="booking_records.name" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="booking_records.contact_number" class="control-label"></label>
+            <input asp-for="booking_records.contact_number" class="form-control" maxlength="30" />
+            <span asp-validation-for="booking_records.contact_number" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="booking_records.address" class="control-label"></label>
+            <input asp-for="booking_records.address" class="form-control" maxlength="200" />
+            <span asp-validation-for="booking_records.address" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="booking_records.email" class="control-label"></label>
+            <input asp-for="booking_records.email" class="form-control" maxlength="50" />
+            <div class="form-text">We'll never share your email with anyone else.</div>
+            <span asp-validation-for="booking_records.email" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="booking_records.event_date" class="control-label"></label>
+            <input asp-for="booking_records.event_date" class="form-control" type="date" />
+            <div class="form-text">You can change this later.</div>
+            <span asp-validation-for="booking_records.event_date" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="booking_records.additional_message" class="control-label"></label>
+            <textarea asp-for="booking_records.additional_message" class="form-control" rows="3" maxlength="255"></textarea>
+            <div class="form-text">You can put your other contact information. (e.g. Facebook)</div>
+            <span asp-validation-for="booking_records.additional_message" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:150px">Submit</button>
+    </div>
+</form>

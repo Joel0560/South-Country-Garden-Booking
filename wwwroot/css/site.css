@@ -1,0 +1,121 @@
+body {
+    color: #202124;
+    line-height: 1.5em;
+    min-height: 100vh;
+}
+
+main {
+    min-height: 70vh;
+}
+
+.scg-logo {
+    width: 140px;
+}
+
+.text-purple, .dropdown-item {
+    color: #48487f;
+}
+
+.hr-updates {
+    border: 1px solid black;
+    margin: 0 auto 16px;
+    width: 50px;
+}
+
+.card {
+    border: none;
+}
+
+.card-title, .card-body > .h5, .normalize-heading {
+    font-family: "Open Sans", sans-serif;
+}
+
+nav {
+    box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
+}
+
+.booking-bg {
+    background-image: url(../images/booking-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: #48487f;
+    font-size: 17px;
+    line-height: 1.5em;
+}
+
+.card-link.proper-underline, .proper-underline {
+    border-bottom: 1px solid;
+    padding-bottom: 8px;
+    border-color: #48487f ;
+}
+
+section > h2 {
+    font-size:1.2rem
+}
+
+#testimonials i {
+    color: #FBBC04;
+}
+
+.testimonials-links {
+    
+}
+
+.text-italic {
+    font-style: italic;
+}
+
+.text-emphasize {
+    font-weight: 700;
+    font-style: italic;
+}
+
+#gallery .container .row div {
+    background: blue;
+    height: 100px;
+    outline: solid;
+}
+
+.PWqJSb {
+    margin: 30px 0;
+}
+
+.PWqJSb:first-child {
+    position: relative;
+}
+
+.d11Ssd {
+    display: block;
+    width: 100%;
+}
+
+#gallery > .UCecQ img {
+    border: none;
+}
+
+@media (min-width: 640px) {
+    .UCecQ {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .PWqJSb {
+        flex: 0 0 48%;
+        margin: 5px 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .summary-padding {
+        padding: 0 14rem !important;
+    }
+    .PWqJSb.ZdKHsd {
+        flex: 0 0 32%;
+    }
+    .PWqJSb {
+        flex: 0 0 32%;
+    }
+}

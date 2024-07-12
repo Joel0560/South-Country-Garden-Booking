@@ -1,0 +1,288 @@
+﻿@page
+@model south_country_garden.Pages.Admin_Controls.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+@if (HttpContext.Session.GetString("LogInState") == "true")
+{
+    <form method="post">
+        <input hidden asp-for="booking_records.booking_id" />
+        <div class="border p-3 mt-4">
+            <div class="row pb-2">
+                <h2 class="text-primary pl-3 normalize-heading">Update Booking</h2>
+                <hr />
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.name" class="control-label" required></label>
+                <input asp-for="booking_records.name" class="form-control" />
+                <span asp-validation-for="booking_records.name" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.contact_number" class="control-label"></label>
+                <input asp-for="booking_records.contact_number" class="form-control" />
+                <span asp-validation-for="booking_records.contact_number" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.address" class="control-label"></label>
+                <input asp-for="booking_records.address" class="form-control" />
+                <span asp-validation-for="booking_records.address" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.email" class="control-label"></label>
+                <input asp-for="booking_records.email" class="form-control" />
+                <span asp-validation-for="booking_records.email" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.additional_message" class="control-label"></label>
+                <input asp-for="booking_records.additional_message" class="form-control" />
+                <span asp-validation-for="booking_records.additional_message" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.remarks" class="control-label"></label>
+                <input asp-for="booking_records.remarks" class="form-control" />
+                <span asp-validation-for="booking_records.remarks" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.payment_status" class="control-label"></label>
+                <input asp-for="booking_records.payment_status" class="form-control" />
+                <span asp-validation-for="booking_records.payment_status" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.booking_status" class="control-label"></label>
+                <div class="form-check mt-2">
+                    <input asp-for="booking_records.booking_status" class="form-check-input" value="Confirmed" type="radio">
+                    <label class="form-check-label">
+                        Confirmed
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input asp-for="booking_records.booking_status" class="form-check-input" value="Unconfirmed" type="radio">
+                    <label class="form-check-label">
+                        Unconfirmed
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input asp-for="booking_records.booking_status" class="form-check-input" value="Finished" type="radio">
+                    <label class="form-check-label">
+                        Finished
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input asp-for="booking_records.booking_status" class="form-check-input" value="Terminated" type="radio">
+                    <label class="form-check-label">
+                        Terminated
+                    </label>
+                </div>
+                <span asp-validation-for="booking_records.booking_status" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.event_title" class="control-label"></label>
+                <input asp-for="booking_records.event_title" class="form-control" />
+                <span asp-validation-for="booking_records.event_title" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.color_motif" class="control-label"></label>
+                <input asp-for="booking_records.color_motif" class="form-control" />
+                <span asp-validation-for="booking_records.color_motif" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.event_date" class="control-label"></label>
+                <input asp-for="booking_records.event_date" class="form-control" type="date" />
+                <div class="form-text">You can change this later</div>
+                <span asp-validation-for="booking_records.event_date" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.church" class="control-label"></label>
+                <input asp-for="booking_records.church" class="form-control" />
+                <span asp-validation-for="booking_records.church" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.venue" class="control-label"></label>
+                <input asp-for="booking_records.venue" class="form-control" />
+                <span asp-validation-for="booking_records.venue" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.time_preparation" class="control-label"></label>
+                <input asp-for="booking_records.time_preparation" class="form-control" />
+                <span asp-validation-for="booking_records.time_preparation" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.pax_number" class="control-label"></label>
+                <input asp-for="booking_records.pax_number" class="form-control" />
+                <span asp-validation-for="booking_records.pax_number" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.event_time" class="control-label"></label>
+                <input asp-for="booking_records.event_time" class="form-control" />
+                <span asp-validation-for="booking_records.event_time" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.total_package" class="control-label"></label>
+                <input asp-for="booking_records.total_package" class="form-control" />
+                <span asp-validation-for="booking_records.total_package" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.event_coordination" class="control-label"></label>
+                <input asp-for="booking_records.event_coordination" class="form-control" />
+                <span asp-validation-for="booking_records.event_coordination" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.program_hosting" class="control-label"></label>
+                <input asp-for="booking_records.program_hosting" class="form-control" />
+                <span asp-validation-for="booking_records.program_hosting" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.mobile_sound_system" class="control-label"></label>
+                <input asp-for="booking_records.mobile_sound_system" class="form-control" />
+                <span asp-validation-for="booking_records.mobile_sound_system" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.lighting_system" class="control-label"></label>
+                <input asp-for="booking_records.lighting_system" class="form-control" />
+                <span asp-validation-for="booking_records.lighting_system" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.catering" class="control-label"></label>
+                <input asp-for="booking_records.catering" class="form-control" />
+                <span asp-validation-for="booking_records.catering" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.tiffany_chairs_and_tables" class="control-label"></label>
+                <input asp-for="booking_records.tiffany_chairs_and_tables" class="form-control" />
+                <span asp-validation-for="booking_records.tiffany_chairs_and_tables" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.red_carpets" class="control-label"></label>
+                <input asp-for="booking_records.red_carpets" class="form-control" />
+                <span asp-validation-for="booking_records.red_carpets" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.personalized_cake_layers" class="control-label"></label>
+                <input asp-for="booking_records.personalized_cake_layers" class="form-control" />
+                <span asp-validation-for="booking_records.personalized_cake_layers" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.photo_gallery" class="control-label"></label>
+                <input asp-for="booking_records.photo_gallery" class="form-control" />
+                <span asp-validation-for="booking_records.photo_gallery" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.table_numbers" class="control-label"></label>
+                <input asp-for="booking_records.table_numbers" class="form-control" />
+                <span asp-validation-for="booking_records.table_numbers" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.tarpaulin" class="control-label"></label>
+                <input asp-for="booking_records.tarpaulin" class="form-control" />
+                <span asp-validation-for="booking_records.tarpaulin" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.signature_frame" class="control-label"></label>
+                <input asp-for="booking_records.signature_frame" class="form-control" />
+                <span asp-validation-for="booking_records.signature_frame" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.holding_area_rooms" class="control-label"></label>
+                <input asp-for="booking_records.holding_area_rooms" class="form-control" />
+                <span asp-validation-for="booking_records.holding_area_rooms" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.lcd_and_projectors" class="control-label"></label>
+                <input asp-for="booking_records.lcd_and_projectors" class="form-control" />
+                <span asp-validation-for="booking_records.lcd_and_projectors" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.event_extras" class="control-label"></label>
+                <input asp-for="booking_records.event_extras" class="form-control" />
+                <span asp-validation-for="booking_records.event_extras" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.hair_and_make_up" class="control-label"></label>
+                <input asp-for="booking_records.hair_and_make_up" class="form-control" />
+                <span asp-validation-for="booking_records.hair_and_make_up" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.giveaway" class="control-label"></label>
+                <input asp-for="booking_records.giveaway" class="form-control" />
+                <span asp-validation-for="booking_records.giveaway" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.photo_and_video_coverage" class="control-label"></label>
+                <input asp-for="booking_records.photo_and_video_coverage" class="form-control" />
+                <span asp-validation-for="booking_records.photo_and_video_coverage" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.photo_booth" class="control-label"></label>
+                <input asp-for="booking_records.photo_booth" class="form-control" />
+                <span asp-validation-for="booking_records.photo_booth" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.bridal_car" class="control-label"></label>
+                <input asp-for="booking_records.bridal_car" class="form-control" />
+                <span asp-validation-for="booking_records.bridal_car" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.entourage_church_flower" class="control-label"></label>
+                <input asp-for="booking_records.entourage_church_flower" class="form-control" />
+                <span asp-validation-for="booking_records.entourage_church_flower" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.additional_stages" class="control-label"></label>
+                <input asp-for="booking_records.additional_stages" class="form-control" />
+                <span asp-validation-for="booking_records.additional_stages" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.beef" class="control-label"></label>
+                <input asp-for="booking_records.beef" class="form-control" />
+                <span asp-validation-for="booking_records.beef" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.seafood" class="control-label"></label>
+                <input asp-for="booking_records.seafood" class="form-control" />
+                <span asp-validation-for="booking_records.seafood" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.pork" class="control-label"></label>
+                <input asp-for="booking_records.pork" class="form-control" />
+                <span asp-validation-for="booking_records.pork" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.chicken" class="control-label"></label>
+                <input asp-for="booking_records.chicken" class="form-control" />
+                <span asp-validation-for="booking_records.chicken" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.pasta" class="control-label"></label>
+                <input asp-for="booking_records.pasta" class="form-control" />
+                <span asp-validation-for="booking_records.pasta" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.vegetable" class="control-label"></label>
+                <input asp-for="booking_records.vegetable" class="form-control" />
+                <span asp-validation-for="booking_records.vegetable" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.rice" class="control-label"></label>
+                <input asp-for="booking_records.rice" class="form-control" />
+                <span asp-validation-for="booking_records.rice" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="booking_records.dessert" class="control-label"></label>
+                <input asp-for="booking_records.dessert" class="form-control" />
+                <span asp-validation-for="booking_records.dessert" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:150px">Update</button>
+            <a asp-page="Index" class="btn btn-secondary" style="width:150px">Back to List</a>
+        </div>
+    </form>
+}
+else
+{
+    <h1 class="text-danger text-center">UNAUTHORIZED ACCESS!</h1>
+}
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
